@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oleo+Script&family=Orelega+One&family=Radio+Canada:wght@300&family=Tapestry&display=swap');
+
+html {
+
+}
+body{
+    font-family: "Oleo Script", cursive;
+    color: rgb(107, 51, 51);
+    text-align: center;
+    margin: 0%;
+    min-height: 100vh;
+    background-image: url(./Imagenes/fondo4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Cabecera {
+    background: #FFFCE1;
+    color: white;
+    padding: 5px 0;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+    .Cabecera a{
+        color: rgb(107, 51, 51);
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+    }
+.Conteiner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Navigation {
+    margin: 0;
+    padding: 0;
+}
+    .Navigation a {
+        display: inline-block;
+        padding: 10px  20px;
+        transition: all 0.4s linear;
+        border-radius: 4px;
+    }
+        .Navigation a:hover{
+        background: #e4d12b;
+        }
+
+.Contenido{
+    padding: 160px;
+}
+.Text{
+    display: inline-block;
+    font-size: 18px;
+    width: 550px;
+    height: 100px;
+}
+.Imagen_fondo{
+    background-image: -moz-linear-gradient();
+}
+.LISTA{
+   list-style:none;
+   color:rgb(107, 51, 51);
+   justify-content: center;
+   margin: 1rem;
+   padding: 1rem;
+}
+.Padre{
+    display: flex;
+    padding:25px;
+}
+.Hijo {
+    background-color:rgb(255, 253, 140);
+    margin: 1rem;
+    padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-content: center;
+    width: 300px;
+    }
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat (12, 1fr);
+    width: 90%;
+    max-width: 110px;
+    height: 100%;
+    margin: auto;
+    gap: 10px;
+    overflow:hidden;
+    align-items: center;
+}
+.Fin{
+    display: flex;
+    background-color: #FFFCE1;
+    color: rgb(107, 51, 51);
+    padding: 60px 0;
+    text-align: center;
+    justify-content: center;
+}
+.texto-footer{
+    grid-column: 1/-1;
+    margin-bottom: 30px;
+
+
+}
+[class^="footer=items"] a{
+    color:black;
+    justify-content: center;
+    font-size: 30px;
+}
+[class^="footer=items"] {
+    color:white;
+    justify-content: center;
+    grid-column: span 3;
+
+}
