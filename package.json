@@ -1,0 +1,25 @@
+{
+  "name": "dolces-tentaziones-_-lavergne-matias",
+  "version": "1.0.0",
+  "description": "Un paquete de SASS para dolces tentaziones",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "build-css": "node-sass --include-path scss sass/main.scss css/destino.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Matias494/Panaderia.git"
+  },
+  "author": "Lavergne Matias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Matias494/Panaderia/issues"
+  },
+  "homepage": "https://github.com/Matias494/Panaderia#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.16"
+  }
+}
