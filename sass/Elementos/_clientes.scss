@@ -1,0 +1,30 @@
+.cards{
+    display: flex;
+    justify-content: center;
+}
+.cards .card{
+    background-color: map-get($colores, $key:"fondo" )  ;
+    display: flex;
+    width: 70%;
+    height: 250px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    box-shadow: 0 0 6px o rgba(41, 76%, 60%, 0.7)
+}
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #634D37;
+    border-radius: 50%;
+    display: block;
+}.cards .card > .contenido-textos-card{
+    width: 60%;
+    color: #634D37;
+}
+.cards .card > .contenido-textos-card p{
+    font-weight: 300;
+    padding-top: 5px;
+    text-align: center;
+}

@@ -1,5 +1,19 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oleo+Script&family=Orelega+One&family=Radio+Canada:wght@300&family=Tapestry&display=swap');
 
+$colores: (
+    "marron": #634D37,
+    "fondo": #FFFCE0,
+    "texto": #fff,
+    );
+
+ @mixin hya {
+        width: 100%;
+        height: 100%;
+ }
+ @mixin AA {
+    width: 90%;
+}
 *{
     margin: 0;
     padding: 0;
@@ -16,7 +30,7 @@ body{
     overflow: hidden;
 }
 .titulo{
-    color: #634D37;
+    color:map-get($colores, $key:"marron" );
     font-size: 30px;
     text-align: center;
     margin-bottom: 60px;
@@ -25,17 +39,11 @@ body{
 @import"./Elementos/cabecera";
 @import "./Elementos/bienvenidos";
 
-
 /* Donde estamos*/
-
-.Dirección{
-    background: #FFFCE0;
-    padding-bottom: 30px;
-    text-align: center;
-}
+@import "./Elementos/donde-estamos";
 /*Galeria*/
 .portafolio{
-    background-color: #FFFCE0;
+    background-color: map-get($colores, $key:"fondo" );
 }
 .galeria-port{
     display: flex;
@@ -53,15 +61,13 @@ body{
 
 }
 .imagen-port >img{
-    width: 100%;
-    height: 100%;
+    @include hya;
     object-fit: cover;
     display: block;
 }
 .hover-galeria{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    @include hya;
     top: 0;
     transform: scale(0);
     background: hsla(41, 76%, 60%, 0.7); 
@@ -80,79 +86,141 @@ body{
 .imagen-port:hover .hover-galeria{
     transform: scale(1);
 }
-
 /* Nuestros Servicios*/
-
-.servicios{
-    background: #FFFCE0;
-    padding-bottom: 30px;
-}
-.servicio-cont{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.servicio-ind{
-    width: 50%;
-    text-align: center;
-}
-.servicio-ind img{
-    width: 100px;
-    height: 100px;
-    border: 2px solid #634D37;
-    border-radius: 25%;
-    display: block;
-    margin: auto;
-}
-.servicio-ind h3{
-    margin: 10px 0;
-}
-
-
+@import "./Elementos/nuestros-servicios";
 /* clientes*/
-.cards{
-    display: flex;
-    justify-content: center;
-}
-.cards .card{
-    background-color: #FFFCE0;
-    display: flex;
-    width: 70%;
-    height: 250px;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 25px;
-    box-shadow: 0 0 6px o rgba(41, 76%, 60%, 0.7)
-}
-.cards .card img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border: 3px solid #634D37;
-    border-radius: 50%;
-    display: block;
-}.cards .card > .contenido-textos-card{
-    width: 60%;
-    color: #634D37;
-}
-.cards .card > .contenido-textos-card p{
-    font-weight: 300;
-    padding-top: 5px;
-    text-align: center;
-}
-
+@import "./Elementos/clientes";
 /*footer*/
 footer{
-    background: #FFFCE0;
+    background: map-get($colores, $key:"fondo" );
     padding: 60px 0 30px 0;
     margin: auto;
     overflow: hidden;
 }
-.contenedor-footer{
-    display: flex;
-    width: 90%;
-    justify-content: space-evenly;
-    margin: auto;
-    padding-bottom: 50px;
-    border-bottom:  1px solid #FFFCE0;
+@import "./Elementos/footer";
+
+@media screen and (max-width:600px){
+    header{
+        background-position: center;
+    }
+    /*Bienvenidos*/
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    .imagen-about-us{
+        @include AA;
+
+    }
+    .sobre-nosotros .contenido-textos{
+        @extend .imagen-about-us;
+        text-align: justify;
+    }
+    /*Galeria*/
+    .imagen-port{
+        width: 40%;
+    }
+    /* clientes*/
+    .cards .card{
+        @include AA;
+        margin-bottom: 30px;
+    }
+    /* Nuestros Servicios*/
+     .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+     }
+     .servicio-ind{
+        width: 60%;
+        text-align: center;
+        object-fit: cover;
+
+     }
+     .servicio-ind:nth-child(1), .servicio-ind:nth-child(2), .servicio-ind:nth-child(3), .servicio-ind:nth-child(4), .servicio-ind:nth-child(5){
+        margin-bottom: 60px;
+     }
+     .servicio-ind img{
+        width: 90%;
+    }
+}
+@media screen and (max-width:400px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+    nav > a{
+        margin-right: 5px;
+    }
+    header{
+        background-position: center;
+    }
+    header .textos-header{
+        & h1{
+            font-size: 30px;
+        }
+        & h2 {
+            font-size: 20px;
+        }
+    }
+    /*Bienvenidos*/
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 90%;
+    }
+    /*Galeria*/
+    .imagen-port{
+        width: 95%;
+    }
+    /* clientes*/
+    .cards .card{
+        width: 99%;
+        margin-bottom: 30px;
+    }
+    /* Nuestros Servicios*/
+     .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+     }
+     .servicio-ind{
+        width: 100%;
+        text-align: center;
+     }
+     .servicio-ind:nth-child(1), .servicio-ind:nth-child(2), .servicio-ind:nth-child(3), .servicio-ind:nth-child(4), .servicio-ind:nth-child(5){
+        margin-bottom: 60px;
+     }
+     .servicio-ind img{
+        width: 90%;
+        height: 200px;
+        border: 2px solid #634D37;
+        border-radius: 25%;
+        display: block;
+        margin: auto;
+    }
+    /*footer*/
+    .contenedor-footer{
+        justify-content:center;       
+        flex-direction: column;
+    }
+    .contenedor-foo {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .content-foo h4{
+        border-bottom: none;
+    }
+    .content-foo p{
+            color: map-get($colores, $key:"marron");
+            border-bottom: 1px solid #634D37;
+            padding-bottom: 15px ;
+    }
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oleo+Script&family=Orelega+One&family=Radio+Canada:wght@300&family=Tapestry&display=swap");
 * {
   margin: 0;
@@ -72,11 +71,12 @@ header .textos-header {
   justify-content: space-evenly; }
 
 .imagen-sobre-nosotros {
-  width: 60%; }
+  width: 80%;
+  border-radius: 20%; }
 
 .sobre-nosotros .contenido-textos {
   width: 48%;
-  padding: 0 0 30px 15px;
+  padding: 5 0 30px 15px;
   font-weight: 300;
   text-align: center; }
   .sobre-nosotros .contenido-textos h3 {
@@ -94,11 +94,6 @@ header .textos-header {
       margin-right: 10px; }
 
 /* Donde estamos*/
-.Dirección {
-  background: #FFFCE0;
-  padding-bottom: 30px;
-  text-align: center; }
-
 /*Galeria*/
 .portafolio {
   background-color: #FFFCE0; }
@@ -209,6 +204,12 @@ footer {
   margin: auto;
   overflow: hidden; }
 
+.footer {
+  background: #FFFCE0;
+  padding: 60px 0 30px 0;
+  margin: auto;
+  overflow: hidden; }
+
 .contenedor-footer {
   display: flex;
   width: 90%;
@@ -216,3 +217,104 @@ footer {
   margin: auto;
   padding-bottom: 50px;
   border-bottom: 1px solid #FFFCE0; }
+
+.content-foo {
+  text-align: center; }
+  .content-foo p {
+    color: rgba(99, 77, 54, 0.829); }
+  .content-foo h4 {
+    color: #634D37;
+    border-bottom: 3px solid #8d8b8b;
+    padding-bottom: 5px;
+    margin-bottom: 10px; }
+
+@media screen and (max-width: 600px) {
+  header {
+    background-position: center; }
+  /*Bienvenidos*/
+  .contenedor-sobre-nosotros {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .imagen-about-us, .sobre-nosotros .contenido-textos {
+    width: 90%; }
+  .sobre-nosotros .contenido-textos {
+    text-align: justify; }
+  /*Galeria*/
+  .imagen-port {
+    width: 40%; }
+  /* clientes*/
+  .cards .card {
+    width: 90%;
+    margin-bottom: 30px; }
+  /* Nuestros Servicios*/
+  .servicio-cont {
+    justify-content: center;
+    flex-direction: column; }
+  .servicio-ind {
+    width: 60%;
+    text-align: center;
+    object-fit: cover; }
+  .servicio-ind:nth-child(1), .servicio-ind:nth-child(2), .servicio-ind:nth-child(3), .servicio-ind:nth-child(4), .servicio-ind:nth-child(5) {
+    margin-bottom: 60px; }
+  .servicio-ind img {
+    width: 90%; } }
+
+@media screen and (max-width: 400px) {
+  nav {
+    text-align: center;
+    padding: 30px 0 0 0; }
+  nav > a {
+    margin-right: 5px; }
+  header {
+    background-position: center; }
+  header .textos-header h1 {
+    font-size: 30px; }
+  header .textos-header h2 {
+    font-size: 20px; }
+  /*Bienvenidos*/
+  .contenedor-sobre-nosotros {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .sobre-nosotros .contenido-textos {
+    width: 90%; }
+  .imagen-about-us, .sobre-nosotros .contenido-textos {
+    margin-bottom: 60px;
+    width: 90%; }
+  /*Galeria*/
+  .imagen-port {
+    width: 95%; }
+  /* clientes*/
+  .cards .card {
+    width: 99%;
+    margin-bottom: 30px; }
+  /* Nuestros Servicios*/
+  .servicio-cont {
+    justify-content: center;
+    flex-direction: column; }
+  .servicio-ind {
+    width: 100%;
+    text-align: center; }
+  .servicio-ind:nth-child(1), .servicio-ind:nth-child(2), .servicio-ind:nth-child(3), .servicio-ind:nth-child(4), .servicio-ind:nth-child(5) {
+    margin-bottom: 60px; }
+  .servicio-ind img {
+    width: 90%;
+    height: 200px;
+    border: 2px solid #634D37;
+    border-radius: 25%;
+    display: block;
+    margin: auto; }
+  /*footer*/
+  .contenedor-footer {
+    justify-content: center;
+    flex-direction: column; }
+  .contenedor-foo {
+    margin-bottom: 20px;
+    text-align: center; }
+  .content-foo h4 {
+    border-bottom: none; }
+  .content-foo p {
+    color: #634D37;
+    border-bottom: 1px solid #634D37;
+    padding-bottom: 15px; } }

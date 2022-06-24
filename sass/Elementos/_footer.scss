@@ -1,0 +1,26 @@
+.footer{
+    background: map-get($colores, $key:"fondo" );
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom:  1px solid map-get($colores, $key:"fondo" );
+}
+.content-foo {
+    text-align: center;
+    & p{
+        color: rgba(99, 77, 54, 0.829);
+    }
+    & h4{
+        color: map-get($colores, $key:"marron");
+        border-bottom: 3px solid rgb(141, 139, 139);
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+}
