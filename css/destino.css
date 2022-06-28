@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oleo+Script&family=Orelega+One&family=Radio+Canada:wght@300&family=Tapestry&display=swap");
 * {
   margin: 0;
@@ -94,6 +95,11 @@ header .textos-header {
       margin-right: 10px; }
 
 /* Donde estamos*/
+.Dirección {
+  background: #FFFCE0;
+  padding-bottom: 30px;
+  text-align: center; }
+
 /*Galeria*/
 .portafolio {
   background-color: #FFFCE0; }
@@ -199,12 +205,6 @@ header .textos-header {
 
 /*footer*/
 footer {
-  background: #FFFCE0;
-  padding: 60px 0 30px 0;
-  margin: auto;
-  overflow: hidden; }
-
-.footer {
   background: #FFFCE0;
   padding: 60px 0 30px 0;
   margin: auto;
