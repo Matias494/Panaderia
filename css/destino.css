@@ -255,9 +255,8 @@ footer {
   .nav_imput:checked + .nav_menu {
     clip-path: circle(100% at center); }
   .wave {
-    position: absolute;
     bottom: 0;
-    height: auto;
+    height: 20px;
     width: 100%; }
   /*Bienvenidos*/
   .contenedor-sobre-nosotros {
