@@ -38,7 +38,7 @@ nav {
   text-align: right;
   padding: 30px 50px 0 0; }
   nav div > a {
-    color: #ffff;
+    color: #634D37;
     font-weight: 300;
     text-decoration: none;
     margin-right: 10px; }
@@ -239,7 +239,7 @@ footer {
     cursor: pointer; }
   .nav_menu {
     position: fixed;
-    top: 80px;
+    top: 50px;
     bottom: 0;
     background: #f1b636;
     width: 100%;
@@ -306,7 +306,7 @@ footer {
     width: 90%; }
   /*Galeria*/
   .imagen-port {
-    width: 95%; }
+    width: 70%; }
   /* clientes*/
   .cards .card {
     width: 99%;
@@ -321,7 +321,7 @@ footer {
   .servicio-ind:nth-child(1), .servicio-ind:nth-child(2), .servicio-ind:nth-child(3), .servicio-ind:nth-child(4), .servicio-ind:nth-child(5) {
     margin-bottom: 60px; }
   .servicio-ind img {
-    width: 90%;
+    width: 80%;
     border: 2px solid #634D37;
     border-radius: 25%;
     display: block;
