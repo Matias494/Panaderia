@@ -37,14 +37,17 @@ header {
 nav {
   text-align: right;
   padding: 30px 50px 0 0; }
-  nav > a {
+  nav div > a {
     color: #ffff;
     font-weight: 300;
     text-decoration: none;
     margin-right: 10px; }
 
-.nav > a:hover {
-  text-decoration: underline; }
+.nav div > a:hover {
+  text-decoration: solid; }
+
+.nav_leabel, .nav_imput {
+  display: none; }
 
 .wave {
   position: absolute;
@@ -231,6 +234,24 @@ footer {
 @media screen and (max-width: 660px) {
   header {
     background-position: center; }
+  .nav_leabel {
+    display: block;
+    cursor: pointer; }
+  .nav_menu {
+    position: fixed;
+    top: 80px;
+    bottom: 0;
+    background: #f1b636;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+    transition: clip-path 1s ease-in-out; }
+  .nav_imput:checked + .nav_menu {
+    clip-path: circle(100% at center); }
   /*Bienvenidos*/
   .contenedor-sobre-nosotros {
     flex-direction: column;

@@ -14,17 +14,21 @@ header{
 nav{
     text-align: right;
     padding: 30px 50px 0 0;
-    & > a{
+    & div> a{
         color: #ffff ;
         font-weight: 300;
         text-decoration: none;
         margin-right: 10px;
      }
 }
-
-.nav > a:hover{
-    text-decoration:underline;
+.nav div> a:hover{
+    text-decoration:solid;
 }
+
+.nav_leabel, .nav_imput{
+      display:none;
+    }
+      
 .wave{
     position: absolute;
     bottom: 0;
