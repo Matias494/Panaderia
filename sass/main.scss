@@ -109,20 +109,29 @@ footer{
     }
     .nav_menu{
         position: fixed;
-        top: 50px;
+        top: 20px;
         bottom: 0;
         background: rgb(241, 182, 54);
         width: 100%;
         left: 0;
         display: flex;
-        justify-content: space-evenly;
+        justify-content:space-around;
         flex-direction: column;
         align-items: center;
         clip-path: circle(0 at center);
         transition: clip-path 1s ease-in-out;
+        & a{
+            color: #fff;
+        }
     }
     .nav_imput:checked + .nav_menu{
         clip-path: circle( 100% at center);
+    }
+    .wave{
+        position: absolute;
+        bottom: 0;
+        height: auto;
+        width: 100%;
     }
     /*Bienvenidos*/
     .contenedor-sobre-nosotros{
